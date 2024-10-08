@@ -34,8 +34,6 @@ The application will prompt you to either create a new vehicle or use an existin
 1. Choose to create a new vehicle.
 2. Select the type of vehicle (Car, Truck, or Motorbike).
 3. Enter the brand, model, and year for all vehicles.
-4. If creating a Truck, you’ll be prompted to enter the payload capacity.
-5. If creating a Motorbike, you’ll be prompted to enter the engine size.
 
 ### Using an Existing Vehicle
 
@@ -48,11 +46,10 @@ The application will prompt you to either create a new vehicle or use an existin
   - **Drive**: The car can be driven around the neighborhood.
 
 - **Truck**:
-  - **Haul Cargo**: The truck can haul heavy cargo, utilizing its payload capacity.
-  - **Load and Unload Cargo**: The truck can load and unload cargo, showcasing its strength and utility.
+  - **Haul Cargo**: The truck can haul heavy cargo.
 
 - **Motorbike**:
-  - **Zoom Down the Highway**: The motorbike can zoom down the highway, utilizing its powerful engine.
+  - **Zoom Down the Highway**: The motorbike can zoom down the highway.
 
 These actions ensure that each vehicle type has a unique set of behaviors and provides a different experience when using the application.
 
