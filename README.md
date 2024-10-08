@@ -23,16 +23,16 @@ This project demonstrates object-oriented programming (OOP) principles, with a b
 
 To install the necessary dependencies, navigate to the project directory and run:
 
-``bash
+```bash
 npm install
 Usage
 To use the application, run the following command in your terminal:
-
-bash
+```
+```bash
 Copy code
 node index.js
 The application will prompt you to either create a new vehicle or use an existing vehicle. Follow the prompts to enter details about the vehicle, select actions, and manage your vehicles. You can create cars, trucks, and motorbikes, each with unique properties and actions.
-
+```
 Creating a Vehicle
 Choose to create a new vehicle.
 Select the type of vehicle (Car, Truck, or Motorbike).
