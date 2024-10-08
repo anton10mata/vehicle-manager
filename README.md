@@ -23,63 +23,66 @@ This project demonstrates object-oriented programming (OOP) principles, with a b
 
 To install the necessary dependencies, navigate to the project directory and run:
 
-```bash
-npm install
-Usage
+## Usage
+
 To use the application, run the following command in your terminal:
-```
-```bash
-Copy code
-node index.js
-```
+
 The application will prompt you to either create a new vehicle or use an existing vehicle. Follow the prompts to enter details about the vehicle, select actions, and manage your vehicles. You can create cars, trucks, and motorbikes, each with unique properties and actions.
 
-Creating a Vehicle
-Choose to create a new vehicle.
-Select the type of vehicle (Car, Truck, or Motorbike).
-Enter the brand, model, and year for all vehicles.
-If creating a Truck, you’ll be prompted to enter the payload capacity.
-If creating a Motorbike, you’ll be prompted to enter the engine size.
-Using an Existing Vehicle
-Choose to use an existing vehicle from the list.
-Perform available actions specific to that vehicle type.
-Unique Actions for Each Vehicle Type
-Car:
+### Creating a Vehicle
 
-Drive: The car can be driven around the neighborhood.
-Truck:
+1. Choose to create a new vehicle.
+2. Select the type of vehicle (Car, Truck, or Motorbike).
+3. Enter the brand, model, and year for all vehicles.
+4. If creating a Truck, you’ll be prompted to enter the payload capacity.
+5. If creating a Motorbike, you’ll be prompted to enter the engine size.
 
-Haul Cargo: The truck can haul heavy cargo, utilizing its payload capacity.
-Load and Unload Cargo: The truck can load and unload cargo, showcasing its strength and utility.
-Motorbike:
+### Using an Existing Vehicle
 
-Zoom Down the Highway: The motorbike can zoom down the highway, utilizing its powerful engine.
+1. Choose to use an existing vehicle from the list.
+2. Perform available actions specific to that vehicle type.
+
+### Unique Actions for Each Vehicle Type
+
+- **Car**:
+  - **Drive**: The car can be driven around the neighborhood.
+
+- **Truck**:
+  - **Haul Cargo**: The truck can haul heavy cargo, utilizing its payload capacity.
+  - **Load and Unload Cargo**: The truck can load and unload cargo, showcasing its strength and utility.
+
+- **Motorbike**:
+  - **Zoom Down the Highway**: The motorbike can zoom down the highway, utilizing its powerful engine.
+
 These actions ensure that each vehicle type has a unique set of behaviors and provides a different experience when using the application.
 
-Walkthrough Video
+## Walkthrough Video
+
 For a detailed walkthrough of the application's functionality, watch the video below:
 
+[![Walkthrough Video](https://img.youtube.com/vi/07o5l7zR8o0/0.jpg)](https://youtu.be/07o5l7zR8o0)
 
-
-Click here to view the walkthrough video
+[Click here to view the walkthrough video](https://youtu.be/07o5l7zR8o0)
 
 The walkthrough video demonstrates:
 
-How to invoke the application from the command line.
-How to create a new vehicle and enter all necessary details.
-How to select an existing vehicle and perform unique actions.
-All the prompts and functionality related to cars, trucks, and motorbikes working properly.
-License
+- How to invoke the application from the command line.
+- How to create a new vehicle and enter all necessary details.
+- How to select an existing vehicle and perform unique actions.
+- All the prompts and functionality related to cars, trucks, and motorbikes working properly.
+
+## License
+
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-Contributing
+## Contributing
+
 If you would like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request. Any contributions that improve functionality or add new features are welcome.
 
-Questions
+## Questions
+
 If you have any questions or need further assistance, feel free to reach out:
 
-GitHub: anton10mata
-Email: antoniomatallc@gmail.com
-
-
+- **GitHub**: [anton10mata](https://github.com/anton10mata)
+- **Email**: [antoniomatallc@gmail.com](mailto:antoniomatallc@gmail.com)
 
