@@ -4,12 +4,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["vehicle", "manager", "CLI", "cars", "trucks", "motorbikes"],
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
+  "description": "A CLI application to manage vehicles, including cars, trucks, and motorbikes, with unique actions for each.",
   "dependencies": {
     "inquirer": "^12.0.0"
   }

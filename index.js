@@ -1,12 +1,10 @@
-// index.js
 import inquirer from 'inquirer';
-const { prompt } = inquirer;
 import { Vehicle, Car, Truck, Motorbike } from './Vehicle.js';
 
-// Array to store existing vehicles
+const { prompt } = inquirer;
 const vehicles = [];
 
-// Function to display the main menu
+// Main Menu
 const promptMainMenu = async () => {
   const answers = await prompt([
     {
@@ -30,9 +28,9 @@ const promptMainMenu = async () => {
   }
 };
 
-// Function to create a new vehicle
+// Create New Vehicle
 const createNewVehicle = async () => {
-  const vehicleType = await prompt([
+  const { type } = await prompt([
     {
       type: 'list',
       name: 'type',
@@ -49,15 +47,23 @@ const createNewVehicle = async () => {
 
   let newVehicle;
 
-  switch (vehicleType.type) {
+  switch (type) {
     case 'Car':
       newVehicle = new Car(vehicleDetails.brand, vehicleDetails.model, vehicleDetails.year);
       break;
     case 'Truck':
-      newVehicle = new Truck(vehicleDetails.brand, vehicleDetails.model, vehicleDetails.year);
+      const { towingCapacity } = await prompt([
+        { type: 'input', name: 'towingCapacity', message: 'Enter the towing capacity (in lbs):' },
+      ]);
+      newVehicle = new Truck(vehicleDetails.brand, vehicleDetails.model, vehicleDetails.year, towingCapacity);
       break;
     case 'Motorbike':
-      newVehicle = new Motorbike(vehicleDetails.brand, vehicleDetails.model, vehicleDetails.year);
+      const { frontTireDiameter, rearTireDiameter, tireBrand } = await prompt([
+        { type: 'input', name: 'frontTireDiameter', message: 'Enter the front tire diameter (in inches):' },
+        { type: 'input', name: 'rearTireDiameter', message: 'Enter the rear tire diameter (in inches):' },
+        { type: 'input', name: 'tireBrand', message: 'Enter the tire brand:' },
+      ]);
+      newVehicle = new Motorbike(vehicleDetails.brand, vehicleDetails.model, vehicleDetails.year, frontTireDiameter, rearTireDiameter, tireBrand);
       break;
   }
 
@@ -66,7 +72,7 @@ const createNewVehicle = async () => {
   await promptAction(newVehicle);
 };
 
-// Function to select and use an existing vehicle
+// Use Existing Vehicle
 const useExistingVehicle = async () => {
   if (vehicles.length === 0) {
     console.log('No existing vehicles found. Create a new vehicle first.');
@@ -90,21 +96,37 @@ const useExistingVehicle = async () => {
 
 // Function to perform actions on a vehicle
 const promptAction = async (vehicle) => {
-  const action = await prompt([
+  const actionChoices = ['Go Back to Main Menu'];
+
+  if (vehicle instanceof Truck) {
+    actionChoices.unshift('Tow');
+  } else if (vehicle instanceof Motorbike) {
+    actionChoices.unshift('Perform Wheelie');
+  } else if (vehicle instanceof Car) {
+    actionChoices.unshift('Drive');
+  }
+
+  const { action } = await prompt([
     {
       type: 'list',
       name: 'action',
       message: `What would you like to do with the ${vehicle.getInfo()}?`,
-      choices: ['Perform Action', 'Go Back to Main Menu'],
+      choices: actionChoices,
     },
   ]);
 
-  if (action.action === 'Perform Action') {
+  if (action === 'Tow' && vehicle instanceof Truck) {
+    console.log(vehicle.tow());
+  } else if (action === 'Perform Wheelie' && vehicle instanceof Motorbike) {
+    console.log(vehicle.wheelie());
+  } else if (action === 'Drive' && vehicle instanceof Car) {
     console.log(vehicle.performAction());
-    await promptAction(vehicle);
   } else {
     await promptMainMenu();
+    return;
   }
+
+  await promptAction(vehicle);
 };
 
 // Start the application
