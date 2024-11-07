@@ -57,7 +57,7 @@ These actions ensure that each vehicle type has a unique set of behaviors and pr
 
 For a detailed walkthrough of the application's functionality, watch the video below:
 
-[![Walkthrough Video](https://img.youtube.com/vi/07o5l7zR8o0/0.jpg)](https://youtu.be/07o5l7zR8o0)
+[![Walkthrough Video](https://img.youtube.com/vi/07o5l7zR8o0/0.jpg)](https://youtu.be/isB6P7t97co)
 
 [Click here to view the walkthrough video](https://youtu.be/isB6P7t97co)
 
