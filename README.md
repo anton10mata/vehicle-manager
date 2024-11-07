@@ -59,7 +59,7 @@ For a detailed walkthrough of the application's functionality, watch the video b
 
 [![Walkthrough Video](https://img.youtube.com/vi/07o5l7zR8o0/0.jpg)](https://youtu.be/07o5l7zR8o0)
 
-[Click here to view the walkthrough video]([https://youtu.be/07o5l7zR8o0](https://youtu.be/bGAVSkY9UhU))
+[Click here to view the walkthrough video](https://youtu.be/isB6P7t97co)
 
 The walkthrough video demonstrates:
 
